@@ -1,0 +1,69 @@
+.home-page {
+  @apply bg-main-bg-color;
+  overflow: hidden;
+  width: 100%!important;
+  height: 100vh;
+  display: flex;
+  }
+  body {
+    margin: 0;
+    font-family: Yantramanav, sans-serif;
+    overflow: hidden;
+  }
+  
+  .home-page-section-1 {
+    width: 20%;
+    @apply bg-secondary-bg-color;
+    @apply shadow-lg;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+  .home-page-section-2 h1 {
+    position: relative;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: white;
+    font-family: Yantramanav, sans-serif;
+  }
+  
+  .home-page-section-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 50px; */
+    box-sizing: border-box;
+    /* margin-left: 20%; */
+    width: 80%;
+  }
+  
+  .home-page-section-2 form {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .columna-1 {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .columna-2 {
+    flex: 1;
+    padding: 20px;
+    background-color: lightgray;
+  }
+  .app-img-1 img{
+    width: 350px!important;
+    height: 250px!important;
+    margin-top: 12em;
+  }
+
