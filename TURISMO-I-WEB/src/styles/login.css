@@ -1,0 +1,115 @@
+.home-page {
+  /* background: linear-gradient(135deg, #0091d1 25%, white 50%, #25a621 75%); */
+ 
+  width: 100%!important;
+   height: 100vh; 
+  display: flex;
+  background-size: 1300% 100%;
+  background-image: linear-gradient(135deg, #0091d1, white, #25a621, white, #0091d1);
+  background-clip: content-box;
+  -webkit-background-clip: content-box;
+  color: transparent;
+  animation: changeBg 8s linear infinite;
+
+}
+
+@keyframes changeBg {
+  0% {
+      background-position: 0% 0%;
+  }
+
+  100% {
+      background-position: 100% 0%;
+  }
+}
+
+
+  body {
+    margin: 0;
+    font-family: Yantramanav, sans-serif;
+    overflow: hidden;
+  }
+  
+  .home-page-section-1 {
+    width: 20%;
+    
+    background-color: #25a621;
+    @apply shadow-lg;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+  .home-page-section-2 h1 {
+    position: relative;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: white;
+    font-family: Yantramanav, sans-serif;
+  }
+  
+  .home-page-section-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    width: 40%;
+    height: 60%;
+
+    background-color: #0091d1;
+    border-radius: 15px;
+    @apply shadow-lg;
+    margin: auto;
+  }
+  
+  .home-page-section-2 form {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .home-page-section-2 form input {
+    
+    background-color: white;
+    color: black;
+    
+  }
+  
+  .home-page-section-2 form button {
+    
+    background-color: black;
+    
+  }
+  .title-left{
+
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: Yantramanav, sans-serif;
+    font-size: auto;
+    
+    margin: auto;
+  }
+
+  .container {
+    display: flex;
+  }
+  
+  .columna-1 {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .columna-2 {
+    flex: 1;
+    padding: 20px;
+    background-color: lightgray;
+  }
+  
+
