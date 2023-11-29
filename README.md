@@ -1,5 +1,10 @@
 Manual Técnico - Tiquipaya Turística 
 
+-------ENLACE DE IMAGEN DOCKER WEB---------------------------------------------------
+
+https://drive.google.com/drive/folders/1rX3VrTIwd_JiiOtk95Wy-Iuw1nGupP_z?usp=sharing-
+-------------------------------------------------------------------------------------
+
 Introducción: 
 
  
@@ -100,6 +105,7 @@ Instalación y configuración:
 Frontend (Movil). 
 
 Clonar repositorio. 
+Dentro del proyecto abrir terminal en visual studio code
 
 --Instalar expo--  
 
