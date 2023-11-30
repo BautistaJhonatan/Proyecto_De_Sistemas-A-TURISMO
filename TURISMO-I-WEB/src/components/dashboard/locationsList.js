@@ -78,7 +78,8 @@ export default function LocationsList({ user, setCurrentContent, categories, set
             </div>
             <div class="col">
               { <select
-              className="p-4 mb-6 bg-input-bg-color text-main-text-color rounded ms-1"
+              className="mx-1 p-4  bg-input-bg-color text-main-text-color rounded  searcher"
+
               value={filter.category}
               onChange={(e) =>
                 setFilter({ ...filter, category: e.target.value })
@@ -121,9 +122,9 @@ export default function LocationsList({ user, setCurrentContent, categories, set
                       height={200}
                     />
                   )}
-                  <h2 className="text-main-text-color text-lg">{location.name}</h2>
-                  <p className="text-secondary-text-color h-10">{location.address}</p>
-                  <h3 className="text-secondary-text-color font-bold h-10">{location.categoryName}</h3>
+                  <h2 className=" text-main-text-color font-bold text-lg">{location.name}</h2>
+                  <p className="text-white  h-10">{location.address}</p>
+                  <h3 className="text-black font-bold h-10">{location.categoryName}</h3>
                   <button
                     className="mt-2 rounded px-2 py-1 hover:bg-secondary-text-color hover:text-main-bg-color transition duration-200" 
                     onClick={() => handleViewDetails(location.id)} >

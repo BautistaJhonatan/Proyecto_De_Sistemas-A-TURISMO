@@ -70,11 +70,10 @@ export default function Home() {
           </div>
           
         </div> */}
-       
         
         <div className='home-page-section-2 'class='row'>
           <h1>Iniciar Sesión</h1>
-          <img src="images/LogoTiquipaya.png" width={130}></img>
+          <img src="images/LogoTiquipaya.png" width={200}></img>
           <br></br>
           <div>
             <form className='form' onSubmit={loginForm.handleSubmit}>

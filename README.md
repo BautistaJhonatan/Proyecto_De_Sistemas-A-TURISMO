@@ -113,7 +113,7 @@ npm install -g expo-cli
 
 --Instala dependencia--  
 
-nmp i  
+npm i  
 
 --Instala globalmente en el sistema--  
 

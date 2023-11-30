@@ -26,7 +26,7 @@ export default function Dashboard() {
         setUser(userData)
       }
     })()
-  },[router])
+  }, [router])
 
 
   const logout = () => {
@@ -39,76 +39,64 @@ export default function Dashboard() {
       <Head>
         <title>TIQUIPAYA | Dashboard</title>
       </Head>
+      <div className='dashboard-page h-screen w-full overflow-hidden flex'>
+        <div className='dashboard-page-section-1 items-center '>
+          <div className='dashboard-user-details w-full h-2/5 flex flex-col items-center justify-center border-b border-main-text-color p-4'>
+            <Image src={user && user.userData.photo ? `https://magnificent-painter.pockethost.io/api/files/_pb_users_auth_/${user.userData.id}/${user.userData.photo}` : '/images/user.png'} alt="User Avatar" width={100} height={100} />
+            <h4 className='text-main-text-color'>Administrador</h4>
+            <h3 className='text-main-text-color'>{user && user.userData && user.userData.email}</h3>
+          </div>
+          <div className='dashboard-user-navigation '>
+            <h3>
+            <Image src={'/images/LogoTiquipaya.png'} width={150} height={150}  className="mx-auto" />
 
-      
+              OPCIONES DE USUARIO
+            </h3>
+          </div>
+          <div >
+            <button className={currentContent === 0 ? 'active' : ''} onClick={() => { setCurrentLocation(null); setCurrentContent(0);; }}>
+              <h4>Puntos Registrados</h4>
+            </button>
 
+          </div>
+          <br />
 
-
-
-    <div className='dashboard-page h-screen w-full overflow-hidden flex'>
-      <div className='dashboard-page-section-1 items-center '>
-        <div className='dashboard-user-details w-full h-2/5 flex flex-col items-center justify-center border-b border-main-text-color p-4'>
-          <Image src={ user && user.userData.photo ? `https://magnificent-painter.pockethost.io/api/files/_pb_users_auth_/${user.userData.id}/${user.userData.photo}` : '/images/berni.png'} alt="User Avatar" width={100} height={100} />
-          <h4 className='text-main-text-color'>Administrador</h4>
-          <h3 className='text-secondary-text-color'>{user && user.userData && user.userData.email}</h3>
-        </div>
-        <div className='dashboard-user-navigation '>
-          <h3 >
-            OPCIONES DE USUARIO
-          </h3>
-          
-        </div>
-
-
-        <div >
-          <button className={currentContent === 0 ? 'active' : ''} onClick={() => { setCurrentLocation(null);  setCurrentContent(0); ; }}>
-            <h4>Puntos Registrados</h4>
-          </button>
-
-        </div>
-        <br/>
-
-        <div>
-          <button className={currentContent === 1 ? 'active' : ''} onClick={() => { setCurrentLocation(null); setCurrentContent(1); }}>
+          <div>
+            <button className={currentContent === 1 ? 'active' : ''} onClick={() => { setCurrentLocation(null); setCurrentContent(1); }}>
               <h4>Agregar Punto</h4>
-          </button>
+            </button>
+          </div>
+
+
+          <div className='dashboard-user-options w-full h-1/5 flex items-center justify-center'>
+            <button
+              className={`  px-4 rounded bg-black text-main-text-color transition duration-200 ease-in-out hover:bg-secondary-text-color button-with-radius`}
+              onClick={logout}
+            >
+              Cerrar Sesión
+            </button>
+          </div>
+
+
         </div>
-        
-
-
-
-        <div className='dashboard-user-options w-full h-1/5 flex items-center justify-center'>
-          <button className='mx-4 py-2 px-4 rounded bg-input-bg-color text-main-text-color transition duration-200 ease-in-out hover:bg-secondary-text-color' onClick={logout}>
-            Cerrar sesion
-          </button>
-        </div>
-      </div>
-
-     
-      
-      <div className='dashboard-page-section-2 '>
+        <div className='dashboard-page-section-2 '>
           <>
             {user && (
               <>
                 {currentContent == 0 && (
-                  <LocationsList categories={categories} user={user} setCurrentContent={setCurrentContent} setCurrentLocation={setCurrentLocation}/> 
+                  <LocationsList categories={categories} user={user} setCurrentContent={setCurrentContent} setCurrentLocation={setCurrentLocation} />
                 )}
                 {currentContent == 1 && (
                   <LocationsForm categories={categories} user={user} setCurrentContent={setCurrentContent} location={null} />
                 )}
                 {currentContent == 2 && (
-                  <LocationsForm categories={categories} user={user} setCurrentContent={setCurrentContent} location={currentLocation} setCurrentLocation={setCurrentLocation}/>
+                  <LocationsForm categories={categories} user={user} setCurrentContent={setCurrentContent} location={currentLocation} setCurrentLocation={setCurrentLocation} />
                 )}
               </>
             )}
-        </>
+          </>
+        </div>
       </div>
-
-
-    </div>
-
-
-    
     </>
   )
 }

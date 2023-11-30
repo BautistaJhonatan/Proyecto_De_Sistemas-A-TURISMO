@@ -28,19 +28,20 @@ input {
   }
   
   button {
-    @apply bg-secondary-text-color;
+    background-color: black; /* Cambia el color de fondo a negro */
     color: white;
-    width: 100%;
+    width: 200px;
     padding: 12px;
-    border-radius: 5px;
+    border-radius: 10px;
     @apply shadow-lg;
-    font-size: 16px;
+    font-size: 17px;
   }
+  
 
   .dashboard-page-section-1{
     @apply shadow-lg;
     width: 20%;
-    background-color: #25a621;
+    background-color: #0091d1;
     display: flex;
     flex-direction: column;
     
@@ -53,7 +54,7 @@ input {
     /* background: linear-gradient(135deg, #0091d1 25%, white 50%, #25a621 75%); */
     width: 100%;
     background-size: 1300% 100%;
-    background-image: linear-gradient(135deg, #0091d1, white, #25a621, white, #0091d1);
+    background: #b3fa61;
     background-clip: content-box;
     -webkit-background-clip: content-box;
     color: black;
@@ -78,12 +79,14 @@ input {
   .dashboard-user-navigation {
     display: flex;
     align-items: center;
-    color: white;
+    color: #b3fa61;
     font-family: Yantramanav, sans-serif;
     font-size: auto;
+    font-weight: bold; /* Agrega esta línea para hacer el texto en negrita */
     margin: auto;
     align-content: center;
   }
+  
   .navbar{
     width: 85%;
     height: 20%;
@@ -94,12 +97,12 @@ input {
   }
 
   .dashboard-user-details img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 2px solid #ccc;
-    @apply my-2;
+    
+    width: 150px;
+    height: 130px;
+    
+    
+    
   }
 
 .locations-form{
@@ -122,6 +125,9 @@ input {
   background-color: white;
   
 }
+.button-with-radius {
+  border-radius: 10px;
+}
 
 
 
@@ -132,7 +138,7 @@ input {
   max-height: 98vh;
   overflow-y: auto;
   background-size: 1300% 100%;
-  background-image: linear-gradient(135deg, #0091d1, white, #25a621, white, #0091d1);
+  background: #b3fa61;
   background-clip: content-box;
   -webkit-background-clip: content-box;
   color: transparent;

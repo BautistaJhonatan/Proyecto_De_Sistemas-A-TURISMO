@@ -43,7 +43,7 @@ export default function LocationsForm({ location, user, setCurrentContent, categ
                 // verify that the user has uploaded at least one photo (.jpg, .jpeg, .png)
                 if (values.photos.length > 20) throw new Error('Solo puede subir hasta 20 recursos')
                 // verify that the user has uploaded at least one photo (.jpg, .jpeg, .png)
-                if (!isEditing && values.photos.filter(photo => photo.type == 'image/jpeg' || photo.type == 'image/png').length == 0) throw new Error('Debe subir al menos una foto en formato .jpg o .png')
+                if (!isEditing && values.photos.filter(photo => photo.type == 'image/jpeg' || photo.type == 'image/png').length == 0) throw new Error('Debe subir al menos una foto en formato .jpg')
                 // verify that the user has uploaded at least one photo (.jpg, .jpeg, .png)
 
                 if (values.longitude === null || values.latitude === null) throw new Error('Debe seleccionar una ubicacion en el mapa')
@@ -106,7 +106,7 @@ export default function LocationsForm({ location, user, setCurrentContent, categ
 
                 {isEditing && (
                     <button 
-                        className="p-2 bg-secondary-text-color w-10 text-main-text-color hover:bg-main-text-color hover:text-secondary-text-color transition duration-200 flex items-center"
+                        className="p-2  bg-secondary-text-color w-10 text-main-text-color hover:bg-main-text-color hover:text-secondary-text-color transition duration-200 flex items-center"
                         onClick={() => setCurrentContent(0)}
                     >
                         <FontAwesomeIcon icon={faArrowLeft} />
@@ -194,9 +194,9 @@ export default function LocationsForm({ location, user, setCurrentContent, categ
               <div className=" w-full p-2 bg-main-bg-color text-main-text-color border rounded border-main-text-color">
                 <MapWithNoSSR formik={formik} />
               </div>
-            <textarea className="w-full rounded p-2 bg-main-bg-color text-main-text-color border border-main-text-color" type="text" name="description" placeholder="Descripcion" onChange={formik.handleChange} value={formik.values.description}></textarea>
+            <textarea className="w-full p-2 border rounded   bg-main-bg-color text-main-text-color border border-main-text-color" type="text" name="description" placeholder="Descripcion" onChange={formik.handleChange} value={formik.values.description}></textarea>
             {/* Similar inputs for city_id and category_id */}
-            <button type="submit"  disabled={loading} className="p-2 bg-secondary-text-color text-main-text-color hover:bg-main-text-color hover:text-secondary-text-color transition duration-200">
+            <button type="submit"  disabled={loading} className="p-2 bg-black text-main-text-color hover:bg-main-text-color hover:text-secondary-text-color transition duration-200">
                   {loading ? 'Cargando...' : isEditing ? 'Editar detalles de ubicacion' : 'Agregar Ubicacion'}
             </button>
         </form>

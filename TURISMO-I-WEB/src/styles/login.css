@@ -1,17 +1,16 @@
 .home-page {
-  /* background: linear-gradient(135deg, #0091d1 25%, white 50%, #25a621 75%); */
- 
-  width: 100%!important;
-   height: 100vh; 
+  width: 100% !important;
+  height: 110vh;
   display: flex;
-  background-size: 1300% 100%;
-  background-image: linear-gradient(135deg, #0091d1, white, #25a621, white, #0091d1);
+  background-size: cover; /* Puedes ajustar esta propiedad según tus necesidades */
+  background:#b3fa61;
   background-clip: content-box;
   -webkit-background-clip: content-box;
   color: transparent;
-  animation: changeBg 8s linear infinite;
-
+  
 }
+
+
 
 @keyframes changeBg {
   0% {
@@ -44,7 +43,7 @@
   .home-page-section-2 h1 {
     position: relative;
     font-size: 1.5em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     color: white;
     font-family: Yantramanav, sans-serif;
   }
@@ -67,7 +66,7 @@
   }
   
   .home-page-section-2 form {
-    width: 25vw;
+    width: 16vw;
     display: flex;
     flex-direction: column;
     align-items: center;
